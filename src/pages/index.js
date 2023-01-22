@@ -1,9 +1,50 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
+import { DoubleHeader as FakeHeader } from "../components/FakeHeader.js";
+
+const styles = {};
 
 const inter = Inter({ subsets: ["latin"] });
+
+const fakeHeaderMockData = {
+  userLinks: [
+    {
+      link: "#",
+      label: "Privacy & Security",
+    },
+    {
+      link: "#",
+      label: "Account settings",
+    },
+    {
+      link: "#",
+      label: "Support options",
+    },
+  ],
+  mainLinks: [
+    {
+      link: "#",
+      label: "Book a demo",
+    },
+    {
+      link: "#",
+      label: "Documentation",
+    },
+    {
+      link: "#",
+      label: "Community",
+    },
+    {
+      link: "#",
+      label: "Academy",
+    },
+    {
+      link: "#",
+      label: "Forums",
+    },
+  ],
+};
 
 export default function Home() {
   return (
@@ -15,6 +56,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <FakeHeader {...fakeHeaderMockData} />
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
