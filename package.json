@@ -1,0 +1,19 @@
+{
+  "name": "next-app-scaffolding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordevo/next-app-scaffolding.git"
+  },
+  "author": "jordi & oriol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordevo/next-app-scaffolding/issues"
+  },
+  "homepage": "https://github.com/jordevo/next-app-scaffolding#readme"
+}
