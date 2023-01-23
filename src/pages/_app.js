@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import { MantineProvider } from "@mantine/core";
-
+import {SuiProvider} from '../contexts/sui.js'
 export default function App({ Component, pageProps }) {
   return (
     <MantineProvider
@@ -10,7 +10,9 @@ export default function App({ Component, pageProps }) {
         fontFamily: "courier",
       }}
     >
-      <Component {...pageProps} />
+      <SuiProvider>
+        <Component {...pageProps} />
+      </SuiProvider>
     </MantineProvider>
   );
 }
