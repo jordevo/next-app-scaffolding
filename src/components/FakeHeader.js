@@ -9,6 +9,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {useI18n} from '../hooks/useI18n.js'
+import {useDomain} from '../hooks/useDomain.js'
 
 const HEADER_HEIGHT = 84;
 
@@ -84,6 +85,8 @@ const useStyles = createStyles((theme) => ({
 
 export function DoubleHeader({ mainLinks, userLinks }) {
   const i18n = useI18n()
+  const domain = useDomain()
+  //domain.get('change_password_use_case').execute({email: 'test'})
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(0);
