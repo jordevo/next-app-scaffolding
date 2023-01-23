@@ -8,6 +8,7 @@ import {
   Burger,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import {useI18n} from '../hooks/useI18n.js'
 
 const HEADER_HEIGHT = 84;
 
@@ -82,6 +83,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function DoubleHeader({ mainLinks, userLinks }) {
+  const i18n = useI18n()
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(0);
@@ -115,6 +117,7 @@ export function DoubleHeader({ mainLinks, userLinks }) {
 
   return (
     <Header height={HEADER_HEIGHT} mb={120}>
+      {i18n.t('COMMON.HELLO')}
       <Container className={classes.inner}>
         <div className={classes.links}>
           <Group position="right">{secondaryItems}</Group>
